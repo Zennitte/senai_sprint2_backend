@@ -6,7 +6,7 @@ VALUES ('SPACE'), ('SENAI');
 GO
 
 INSERT INTO MARCA(nomeMarca)
-VALUES ('FORD'), ('TESLA');
+VALUES ('HYUNDAI'), ('TESLA');
 GO
 
 INSERT INTO MODELO(idMarca, nomeModelo)
@@ -21,7 +21,7 @@ INSERT INTO VEICULO(idModelo, idEmpresa, placa)
 VALUES (1, 1, '4444');
 GO
 
-INSERT INTO CLIENTE(nomeCliente, sobrenomeCliente, cpfCliente)
+INSERT INTO CLIENTE(nomeCliente, sobrenomeCliente, cnhCliente)
 VALUES ('LUCAS','Lopez', '111111'), ('SAULO', 'Santos', '222222');
 GO
 
