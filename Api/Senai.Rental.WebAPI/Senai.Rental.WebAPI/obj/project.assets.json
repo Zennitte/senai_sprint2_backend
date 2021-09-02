@@ -454,19 +454,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\User\\.nuget\\packages\\": {}
+    "C:\\Users\\fic\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\OneDrive\\Documentos\\Senai\\2°T_BackEnd\\Api\\Senai.Rental.WebAPI\\Senai.Rental.WebAPI\\Senai.Rental.WebAPI.csproj",
+      "projectUniqueName": "C:\\Users\\fic\\Desktop\\T_Rental\\Api\\Senai.Rental.WebAPI\\Senai.Rental.WebAPI\\Senai.Rental.WebAPI.csproj",
       "projectName": "Senai.Rental.WebAPI",
-      "projectPath": "C:\\Users\\User\\OneDrive\\Documentos\\Senai\\2°T_BackEnd\\Api\\Senai.Rental.WebAPI\\Senai.Rental.WebAPI\\Senai.Rental.WebAPI.csproj",
-      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\OneDrive\\Documentos\\Senai\\2°T_BackEnd\\Api\\Senai.Rental.WebAPI\\Senai.Rental.WebAPI\\obj\\",
+      "projectPath": "C:\\Users\\fic\\Desktop\\T_Rental\\Api\\Senai.Rental.WebAPI\\Senai.Rental.WebAPI\\Senai.Rental.WebAPI.csproj",
+      "packagesPath": "C:\\Users\\fic\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\fic\\Desktop\\T_Rental\\Api\\Senai.Rental.WebAPI\\Senai.Rental.WebAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\fic\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -515,7 +515,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }

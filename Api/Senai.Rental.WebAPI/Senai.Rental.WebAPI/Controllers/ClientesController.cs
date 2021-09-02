@@ -51,5 +51,55 @@ namespace Senai.Rental.WebAPI.Controllers
             return StatusCode(201);
         }
 
+        [HttpPut]
+        public IActionResult PutIdBody(ClienteDomain clienteAtualizado)
+        {
+            ClienteDomain clienteBuscado = _clienteRepository.BuscarPorId(clienteAtualizado.idCliente);
+
+            if (clienteBuscado != null)
+            {
+                try
+                {
+                    if (clienteAtualizado.nomeCliente == null)
+                    {
+                        clienteAtualizado.nomeCliente = clienteBuscado.nomeCliente;
+                    }
+                    if (clienteAtualizado.sobrenomeCliente == null)
+                    {
+                        clienteAtualizado.sobrenomeCliente = clienteBuscado.sobrenomeCliente;
+                    }
+                    if (clienteAtualizado.cnhCliente == null)
+                    {
+                        clienteAtualizado.cnhCliente = clienteBuscado.cnhCliente;
+                    }
+
+                    _clienteRepository.AtualizarIdCorpo(clienteAtualizado);
+
+                    return NoContent();
+                }
+                catch (Exception)
+                {
+
+                    return BadRequest();
+                }
+            }
+
+            return NotFound(
+                new
+                {
+                    mensagem = "Cliente não encontrado",
+                    erro = true
+                }
+             );
+        }
+
+        [HttpDelete]
+        public IActionResult Delete(ClienteDomain clienteDeletado)
+        {
+            _clienteRepository.Deletar(clienteDeletado.idCliente);
+
+            return NoContent();
+        }
+
     }
 }

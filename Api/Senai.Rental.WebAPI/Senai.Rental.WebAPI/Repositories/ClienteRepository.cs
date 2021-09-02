@@ -10,7 +10,7 @@ namespace Senai.Rental.WebAPI.Repositories
 {
     public class ClienteRepository : IClienteRepository
     {
-        private string stringConexao = "DATA SOURCE = DESKTOP-IU700GH\\SQLEXPRESS; initial catalog = T_Rental; user Id = sa; pwd = senai@132";
+        private string stringConexao = "DATA SOURCE = NOTE0113F1\\SQLEXPRESS; initial catalog = T_Rental; user Id = sa; pwd = Senai@132";
         public void AtualizarIdCorpo(ClienteDomain clienteAtualizado)
         {
             using (SqlConnection con = new SqlConnection(stringConexao))
@@ -35,7 +35,7 @@ namespace Senai.Rental.WebAPI.Repositories
         {
             using (SqlConnection con = new SqlConnection(stringConexao))
             {
-                string querySearch = "SELECT idCliente AS Id, CONCAT(nomeCliente, ' ', sobrenomeCliente) AS Nome, cnhCliente AS CNH FROM Cliente WHERE idCliente = @idCliente";
+                string querySearch = "SELECT idCliente AS Id, nomeCliente AS Nome, sobrenomeCliente AS Sobrenome, cnhCliente AS CNH FROM Cliente WHERE idCliente = @idCliente";
 
                 con.Open();
 
@@ -53,7 +53,8 @@ namespace Senai.Rental.WebAPI.Repositories
                         {
                             idCliente = Convert.ToInt32(rdr[0]),
                             nomeCliente = rdr[1].ToString(),
-                            cnhCliente = rdr[2].ToString()
+                            sobrenomeCliente = rdr[2].ToString(),
+                            cnhCliente = rdr[3].ToString()
                         };
 
                         return clienteBuscado;
@@ -106,7 +107,7 @@ namespace Senai.Rental.WebAPI.Repositories
 
             using (SqlConnection con = new SqlConnection(stringConexao))
             {
-                string querySelectAll = "SELECT idCliente AS Id, CONCAT(nomeCliente, ' ', sobrenomeCliente) AS Nome, cnhCliente AS CNH FROM Cliente";
+                string querySelectAll = "SELECT idCliente AS Id, nomeCliente AS Nome, sobrenomeCliente AS Sobrenome, cnhCliente AS CNH FROM Cliente";
 
                 con.Open();
 
@@ -122,7 +123,8 @@ namespace Senai.Rental.WebAPI.Repositories
                         {
                             idCliente = Convert.ToInt32(rdr[0]),
                             nomeCliente = rdr[1].ToString(),
-                            cnhCliente = rdr[2].ToString()
+                            sobrenomeCliente = rdr[2].ToString(),
+                            cnhCliente = rdr[3].ToString()
                         };
 
                         listaClientes.Add(cliente);
